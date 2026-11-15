@@ -1,0 +1,26 @@
+  JSON (JavaSript Objek Notation)
+Adalah format untuk menyimpan dan bertukar data, bentuknya mirip dengan dictionary python.
+main.py   => tempat menulis kode python
+data.json => tempat menyimpan data
+
+  Aturan JSON
+1. Nama teks harus menggunakan tanda kutip " "
+2. Nilai angka tidak perlu tanda kutip
+3. Boolean menggunakan true atau false pakai huruf kecil
+4. Tidak boleh ada koma setelah properti terakhir
+
+  Fungsi penting
+1. with open ("data.json". "r") as file => buka file bernama data.json dengan mode membaca
+                                        bagian as file memberikan nama file sebagai variabel yang mewakili file yang sedang dibuka
+                                        with, mengelola file dan menutupnya secara otomatis
+2. data = json.load(file)               => python membaca isi file json, mengonversikannya menjadi tipe data yang sesuai, lalu menyimpan hasilnya ke variabel data
+3. json.dump(data, file, indent=4)      => json.dump, mengambil data dari python dan menuliskannya ke file JSON
+                                           indent=4, untuk mengatur jarak indentasi agar JSON terlihat rapi dan mudah dibaca manusia                   
+. json.load() => membaca data dari JSON lalu menuliskannya ke python
+. json.dump() => membaca data dari python lalu menuliskannya ke JSON
+
+Mode file
+1. r           => membaca file
+2. w           => menulis file, menimpa isi sebelumnya
+                    kalau file belum ada, mode "w" biasanya membuat file baru, kalau file sudah ada, isi sebelumnya akan ditimpa
+3. a           => menambahkan isi di akhir file
