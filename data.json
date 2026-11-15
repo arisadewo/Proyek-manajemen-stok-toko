@@ -1,0 +1,14 @@
+{
+    "realme 16": {
+        "harga_beli": 6000000,
+        "harga_jual": 8000000,
+        "stok": 50,
+        "tanggal": "2026-11-13"
+    },
+    "baju": {
+        "harga_beli": 300000,
+        "harga_jual": 300000,
+        "stok": 30,
+        "tanggal": "2026-11-13"
+    }
+}

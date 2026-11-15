@@ -1,0 +1,107 @@
+{
+    "LlQYJ": {
+        "barang": "hp",
+        "jumlah": 0,
+        "total_harga_jual": 0,
+        "keuntungan": 0,
+        "tanggal_terjual": "0"
+    },
+    "Gr0dX": {
+        "barang": "celana",
+        "jumlah": 5,
+        "total_harga_jual": 4000000,
+        "keuntungan": 2000000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "Nnr1j": {
+        "barang": "celana",
+        "jumlah": 10,
+        "total_harga_jual": 8000000,
+        "keuntungan": 4000000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "XWD39": {
+        "barang": "baju",
+        "jumlah": 7,
+        "total_harga_jual": 6300000,
+        "keuntungan": 3500000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "IHcKZ": {
+        "barang": "sepatu",
+        "jumlah": 5,
+        "total_harga_jual": 4000000,
+        "keuntungan": 1500000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "oTJ9z": {
+        "barang": "sepatu",
+        "jumlah": 5,
+        "total_harga_jual": 4000000,
+        "keuntungan": 1500000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "jhAqn": {
+        "barang": "sepatu",
+        "jumlah": 65,
+        "total_harga_jual": 52000000,
+        "keuntungan": 19500000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "9Y49I": {
+        "barang": "laptop",
+        "jumlah": 6,
+        "total_harga_jual": 90000000,
+        "keuntungan": 12000000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "BZCim": {
+        "barang": "hp",
+        "jumlah": 66,
+        "total_harga_jual": 594000000,
+        "keuntungan": 132000000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "pftbe": {
+        "barang": "laptop",
+        "jumlah": 1,
+        "total_harga_jual": 15000000,
+        "keuntungan": 2000000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "o4Xj1": {
+        "barang": "laptop",
+        "jumlah": 60,
+        "total_harga_jual": 900000000,
+        "keuntungan": 120000000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "20oI2": {
+        "barang": "laptop",
+        "jumlah": 90,
+        "total_harga_jual": 1350000000,
+        "keuntungan": 180000000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "ugTzu": {
+        "barang": "laptop",
+        "jumlah": 13,
+        "total_harga_jual": 195000000,
+        "keuntungan": 26000000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "ePcMD": {
+        "barang": "celana",
+        "jumlah": 40,
+        "total_harga_jual": 32000000,
+        "keuntungan": 20000000,
+        "tanggal_terjual": "2026-11-13"
+    },
+    "o5Y9G": {
+        "barang": "buku",
+        "jumlah": 5,
+        "total_harga_jual": 400000,
+        "keuntungan": 150000,
+        "tanggal_terjual": "2026-11-13"
+    }
+}
