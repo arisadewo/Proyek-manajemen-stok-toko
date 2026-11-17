@@ -9,6 +9,11 @@ with open ("data.json", "r") as file:
     produk = json.load(file)
 with open ("riwayat.json", "r") as file:
     riwayat = json.load(file)
+
+def simpan_data(nama_dictionary, nama_file):
+     with open (nama_file, "w") as file:
+          json.dump(nama_dictionary, file, indent=4)
+          
         
 
 
@@ -71,9 +76,8 @@ def tambah_produk():
                         "tanggal": datetime.date.today().isoformat()                                                                     
                 }})
                     print(f"{tambah_barang} berhasil di tambah")
-                    with open ("data.json", "w") as file:
-                      json.dump(produk, file, indent=4)
-                    break   
+                    simpan_data(produk, "data.json")
+                    break
             else:
                 print(f"{tambah_barang} sudah ada, tambahkan produk lain")
 
@@ -109,8 +113,7 @@ def ubah_harga():
                     print(f"harga jual {perubahan_harga} menjadi\t: Rp.{produk [perubahan_harga]["harga_jual"]:,}")
                     print(f"tanggal diubah\t\t: {datetime.date.today()}")
 
-                    with open("data.json","w") as file:
-                      json.dump(produk, file, indent=4)
+                    simpan_data(produk, "data.json")
                     break
 
             else:
@@ -143,8 +146,7 @@ def tambah_stok():
                     print(f"{"-- TAMBAH STOK BERHASIL --":^60}")
                     print(f"\nstok {barang} menjadi\t: {produk[barang]["stok"]}")
                     print(f"tanggal ditambah\t\t: {datetime.date.today()}")
-                    with open("data.json","w") as file:
-                        json.dump(produk, file, indent=4)
+                    simpan_data(produk, "data.json")
                     break
 
             else:
@@ -180,8 +182,7 @@ def kurangi_stok():
                     print(f"{"-- KURANGI STOK BERHASIL --":^}")
                     print(f"\nstok {barang} menjadi\t\t: {produk [barang]["stok"]}")
                     print(f"tanggal dikurangi\t: {datetime.date.today()}")
-                    with open("data.json", "w") as file:
-                        json.dump(produk, file, indent=4)
+                    simpan_data(produk, "data.json")
                     break
 
             else:
@@ -271,11 +272,9 @@ def penjualan():
                     if produk [barang] ["stok"] <1:
                         print(f"\nstok {barang} habis!")
                         del produk [barang]
-                    with open("data.json", "w") as file:
-                        json.dump(produk, file, indent=4)
+                    simpan_data(produk, "data.json")
 
-                    with open("riwayat.json", "w") as file:
-                        json.dump(riwayat, file, indent=4)
+                    simpan_data(riwayat, "riwayat.json")
                     break
         
             else:
