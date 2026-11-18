@@ -103,5 +103,40 @@
         "total_harga_jual": 400000,
         "keuntungan": 150000,
         "tanggal_terjual": "2026-11-13"
+    },
+    "Ac873": {
+        "barang": "buku",
+        "jumlah": 20,
+        "total_harga_jual": 8000000,
+        "keuntungan": 2000000,
+        "tanggal_terjual": "2026-11-17"
+    },
+    "nIqd5": {
+        "barang": "tas",
+        "jumlah": 5,
+        "total_harga_jual": 3500000,
+        "keuntungan": 1000000,
+        "tanggal_terjual": "2026-11-18"
+    },
+    "8WY3W": {
+        "barang": "realme 16",
+        "jumlah": 5,
+        "total_harga_jual": 40000000,
+        "keuntungan": 10000000,
+        "tanggal_terjual": "2026-11-18"
+    },
+    "AZzfZ": {
+        "barang": "sepatu",
+        "jumlah": 2,
+        "total_harga_jual": 14000000,
+        "keuntungan": 4000000,
+        "tanggal_terjual": "2026-11-18"
+    },
+    "ZOnub": {
+        "barang": "buku",
+        "jumlah": 5,
+        "total_harga_jual": 2000000,
+        "keuntungan": 500000,
+        "tanggal_terjual": "2026-11-18"
     }
 }

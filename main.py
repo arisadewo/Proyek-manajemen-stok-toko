@@ -10,13 +10,23 @@ with open ("data.json", "r") as file:
 with open ("riwayat.json", "r") as file:
     riwayat = json.load(file)
 
-def simpan_data(nama_dictionary, nama_file):
+def buat_id(riwayat):
+     while True:
+          id_transaksi = "".join(random.choices(string.digits + string.ascii_letters, k = 5))
+          if id_transaksi not in riwayat:
+               return id_transaksi
+
+def simpan_data(nama_dictionary, nama_file, indent = 4):
      with open (nama_file, "w") as file:
-          json.dump(nama_dictionary, file, indent=4)
-          
-        
+          json.dump(nama_dictionary, file, indent = indent)
 
+def hitung_transaksi(harga_beli, harga_jual, jumlah):
+     total_beli = harga_beli * jumlah
+     total_jual = harga_jual * jumlah
+     keuntungan = total_jual - total_beli
+     return total_beli, total_jual, keuntungan
 
+     
 def semua_produk():
                                 
            print(f"{"SEMUA PRODUK":^60}")
@@ -104,6 +114,8 @@ def ubah_harga():
                     print("update modal harus lebih dari 0")
                 elif update_harga_jual <= 0:
                     print("update harga jual harus lebih dari 0")
+                elif update_harga_jual <= update_harga_beli:
+                     print("harga jual harus lebih tinggi dari modal")
                 else:
                     produk [perubahan_harga] ["harga_beli"] = update_harga_beli
                     produk [perubahan_harga] ["harga_jual"] = update_harga_jual
@@ -216,8 +228,7 @@ def hapus_produk():
             if penghapusan_produk in produk:            
                 del produk[penghapusan_produk]
                 print(f"{penghapusan_produk} berhasil dihapus")
-                with open("data.json", "w") as file:
-                    json.dump(produk, file, indent=4)            
+                simpan_data(produk, "data.json")           
             else:
                 print(f"{penghapusan_produk} tidak ditemukan")
 
@@ -248,18 +259,14 @@ def penjualan():
                     produk [barang] ["stok"] -= pcs
                     produk [barang] ["tanggal"] = datetime.date.today().isoformat()
 
-                    total_harga_beli = pcs * produk [barang] ["harga_beli"]
-                    total_harga_jual = pcs * produk [barang] ["harga_jual"]
-                    keuntungan = total_harga_jual - total_harga_beli
+                    total_harga_beli, total_harga_jual, keuntungan = hitung_transaksi(produk[barang] ["harga_beli"], produk [barang] ["harga_jual"], pcs)
                     tanggal_terjual = datetime.date.today().isoformat()
                     print(f"{"-- PENJUALAN BERHASIL --":^60}")
                     print(f"\n{barang} terjual\t\t: {pcs} pcs\ntotal modal\t\t: Rp.{total_harga_beli:,} /{pcs} pcs\ntotal harga jual\t: Rp.{total_harga_jual:,} /{pcs} pcs\nkeuntungan\t\t: Rp.{keuntungan:,} /{pcs} pcs\ntanggal terjual\t\t: {tanggal_terjual}")
 
-                    while True:
+                    
                          
-                        id_transaksi = "".join(random.choices(string.digits + string.ascii_letters, k=5))
-                        if id_transaksi not in riwayat: 
-                             break 
+                    id_transaksi = buat_id(riwayat)
                                                  
                     riwayat.update({id_transaksi:{
                         "barang": barang,
